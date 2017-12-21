@@ -1,0 +1,172 @@
+[ Program
+	[ Block
+		[ DeclarationSeq
+			[ VarDecls
+				[ IntVarDecls
+					[ sum,
+					x,
+					y]
+				,
+				BoolVarDecls
+					[ a,
+					b,
+					c]
+				]
+			,
+			ProcDecls
+				[ foo
+				[
+				Block
+					[ DeclarationSeq
+						[ VarDecls
+							[ IntVarDecls
+								[ a]
+							,
+							BoolVarDecls
+								[ b,
+								c]
+							]
+						,
+						ProcDecls
+							[ goo
+							[
+							Block
+								[ DeclarationSeq
+									[ VarDecls
+										[ IntVarDecls
+											[ ]
+										,
+										BoolVarDecls
+											[ ]
+										]
+									,
+									ProcDecls
+										[ ]
+									]
+								,
+								CommandSeq
+								]
+								]
+							,ggoo
+							[
+							Block
+								[ DeclarationSeq
+									[ VarDecls
+										[ IntVarDecls
+											[ ]
+										,
+										BoolVarDecls
+											[ ]
+										]
+									,
+									ProcDecls
+										[ ]
+									]
+								,
+								CommandSeq
+								]
+								]
+							]
+						]
+					,
+					CommandSeq
+						[ READ
+							[ a]
+						]
+					]
+				]
+				]
+			]
+		,
+		CommandSeq
+			[ CALL
+				[ foo]
+			,
+			READ
+				[ x]
+			,
+			ASSIGN
+				[ y,
+				34]
+			,
+			ASSIGN
+				[ sum,
+				BINADD
+					[ x,
+					y]
+				]
+			,
+			PRINT
+				[ sum]
+			,
+			READ
+				[ b]
+			,
+			ASSIGN
+				[ c,
+				tt]
+			,
+			ASSIGN
+				[ a,
+				OR
+					[ NEG
+						[ b]
+					,
+					AND
+						[ c,
+						c]
+					]
+				]
+			,
+			ASSIGN
+				[ x,
+				BINADD
+					[ BINMUL
+						[ sum,
+						sum]
+					,
+					BINADD
+						[ BINMOD
+							[ sum,
+							BINDIV
+								[ y,
+								x]
+							]
+						,
+						2]
+					]
+				]
+			,
+			ConditionalCmd
+				[ EQ
+					[ a,
+					c]
+				,
+				CommandSeq
+					[ PRINT
+						[ a]
+					]
+				,
+				CommandSeq
+					[ READ
+						[ a]
+					]
+				]
+			,
+			WHILE
+				[ NE
+					[ y,
+					34]
+				,
+				CommandSeq
+					[ READ
+						[ y]
+					,
+					PRINT
+						[ y]
+					]
+				]
+			]
+		]
+	]
+]

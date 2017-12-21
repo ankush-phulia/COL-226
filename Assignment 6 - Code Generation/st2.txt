@@ -1,0 +1,19 @@
+int	INT
+bool	BOOL
+tt	BOOLVAL
+ff	BOOLVAL
+if	IF
+then	THEN
+else	ELSE
+while	WHILE
+proc	PROC
+print	PRINT
+read	READ
+call	CALL
+n	IDENT	INT	global
+prod	IDENT	INT	global
+more	IDENT	BOOL	global
+printNum	IDENT	PROC	global
+factorial	IDENT	PROC	global
+isZero	IDENT	BOOL	global:factorial
+checkZero	IDENT	PROC	global:factorial

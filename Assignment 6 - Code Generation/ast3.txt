@@ -1,0 +1,85 @@
+[ Program
+	[ Block
+		[ DeclarationSeq
+			[ VarDecls
+				[ IntVarDecls
+					[ n]
+				,
+				BoolVarDecls
+					[ ]
+				]
+			,
+			ProcDecls
+				[ findDigits
+				[
+				Block
+					[ DeclarationSeq
+						[ VarDecls
+							[ IntVarDecls
+								[ iter,
+								digit]
+							,
+							BoolVarDecls
+								[ ]
+							]
+						,
+						ProcDecls
+							[ ]
+						]
+					,
+					CommandSeq
+						[ ASSIGN
+							[ iter,
+							0]
+						,
+						WHILE
+							[ GTE
+								[ n,
+								0]
+							,
+							CommandSeq
+								[ ASSIGN
+									[ digit,
+									BINMOD
+										[ n,
+										10]
+									]
+								,
+								ASSIGN
+									[ n,
+									BINDIV
+										[ n,
+										10]
+									]
+								,
+								PRINT
+									[ digit]
+								,
+								ASSIGN
+									[ iter,
+									BINADD
+										[ iter,
+										1]
+									]
+								]
+							]
+						,
+						PRINT
+							[ iter]
+						]
+					]
+				]
+				]
+			]
+		,
+		CommandSeq
+			[ ASSIGN
+				[ n,
+				3458757]
+			,
+			CALL
+				[ findDigits]
+			]
+		]
+	]
+]
