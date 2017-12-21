@@ -1,0 +1,20 @@
+int sum, x, y;
+bool a, b, c;
+proc foo 
+int a;
+	bool b, c;
+	proc goo 
+		{};
+	{
+		read (yo);
+	};
+{
+	call foo;
+	read(x);
+	y := 34;
+	sum := x+y;
+	print(sum);
+	read(b);
+	c := tt;
+	a := !b || c && c;
+}
