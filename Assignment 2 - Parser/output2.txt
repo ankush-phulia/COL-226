@@ -1,0 +1,23 @@
+int     INT
+bool    BOOL
+tt      BOOLVAL
+ff      BOOLVAL
+if      IF
+then    THEN
+else    ELSE
+proc    PROC
+read    READ
+call    CALL
+print    PRINT
+while   WHILE
+sum     IDENT    INT   global
+x     IDENT    INT   global
+y     IDENT    INT   global
+a     IDENT    BOOL   global
+b     IDENT    BOOL   global
+c     IDENT    BOOL   global
+foo     IDENT    PROC   global
+a     IDENT    INT   global:foo
+b     IDENT    BOOL   global:foo
+c     IDENT    BOOL   global:foo
+goo     IDENT    PROC   global:foo

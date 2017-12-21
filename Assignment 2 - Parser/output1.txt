@@ -1,0 +1,338 @@
+ [  
+Program  [  
+Block  [  
+DeclarationSeq  [  
+VarDecls  [  
+IntVarDecls  [  
+INT , VarDef  [  
+IDENT [sum] , VarDef1  [  
+COMMA , VarDef  [  
+IDENT [x] , VarDef1  [  
+COMMA , VarDef  [  
+IDENT [y] , VarDef1  [  
+EOS  ]  
+ ]  
+ ]  
+ ]  
+ ]  
+ ]  
+ ]  
+ ]  
+,  [  
+BoolVarDecls  [  
+BOOL , VarDef  [  
+IDENT [a] , VarDef1  [  
+COMMA , VarDef  [  
+IDENT [b] , VarDef1  [  
+COMMA , VarDef  [  
+IDENT [c] , VarDef1  [  
+EOS  ]  
+ ]  
+ ]  
+ ]  
+ ]  
+ ]  
+ ]  
+ ]  
+ ]  
+,  [  
+ProcDecls  [  
+Proc IDENT [foo]  [  
+Block  [  
+DeclarationSeq  [  
+VarDecls  [  
+IntVarDecls  [  
+INT , VarDef  [  
+IDENT [a] , VarDef1  [  
+EOS  ]  
+ ]  
+ ]  
+ ]  
+,  [  
+BoolVarDecls  [  
+BOOL , VarDef  [  
+IDENT [b] , VarDef1  [  
+COMMA , VarDef  [  
+IDENT [c] , VarDef1  [  
+EOS  ]  
+ ]  
+ ]  
+ ]  
+ ]  
+ ]  
+ ]  
+,  [  
+ProcDecls  [  
+Proc IDENT [goo]  [  
+Block  [  
+DeclarationSeq  [  
+VarDecls  [  
+IntVarDecls  [  
+EPSILON  ]  
+ ]  
+,  [  
+BoolVarDecls  [  
+EPSILON  ]  
+ ]  
+ ]  
+,  [  
+ProcDecls  [  
+EPSILON  ]  
+ ]  
+, CommandSeq  [  
+LB , Command  [  
+EPSILON  ]  
+, RB  ]  
+ ]  
+ ]  
+EOS  ]  
+ ]  
+, CommandSeq  [  
+LB , Command  [  
+ReadCmd  [  
+Read , LP , IDENT [yo] , RP  ]  
+ ]  
+, EOS , Command  [  
+EPSILON  ]  
+, RB  ]  
+ ]  
+ ]  
+EOS  ]  
+ ]  
+, CommandSeq  [  
+LB ,  [  
+IDENT [call] ,  ]  
+Command  [  
+CallCmd  [  
+IDENT [foo]  ]  
+ ]  
+, EOS , Command  [  
+ReadCmd  [  
+Read , LP , IDENT [x] , RP  ]  
+ ]  
+, EOS , Command  [  
+AssignmentCmd  [  
+IDENT [y] , ASSIGN , Expression  [  
+BoolExpression  [  
+BoolF  [  
+BoolG  [  
+BoolH  [  
+BoolI  [  
+BoolJ  [  
+IntExpression  [  
+IntT  [  
+IntF  [  
+IntF1  [  
+IntLiteral [34]  ]  
+ ]  
+IntT1  [  
+EPSILON  ]  
+ ]  
+IntE  [  
+EPSILON  ]  
+ ]  
+ ]  
+ ]  
+BoolH1  [  
+EPSILON  ]  
+ ]  
+BoolG1  [  
+EPSILON  ]  
+ ]  
+BoolF1  [  
+EPSILON  ]  
+ ]  
+BoolE  [  
+EPSILON  ]  
+ ]  
+ ]  
+ ]  
+ ]  
+, EOS , Command  [  
+AssignmentCmd  [  
+IDENT [sum] , ASSIGN , Expression  [  
+BoolExpression  [  
+BoolF  [  
+BoolG  [  
+BoolH  [  
+BoolI  [  
+BoolJ  [  
+IntExpression  [  
+IntT  [  
+IntF  [  
+IntF1  [  
+IDENT [x]  ]  
+ ]  
+IntT1  [  
+EPSILON  ]  
+ ]  
+IntE  [  
+BINADD , IntExpression  [  
+IntT  [  
+IntF  [  
+IntF1  [  
+IDENT [y]  ]  
+ ]  
+IntT1  [  
+EPSILON  ]  
+ ]  
+IntE  [  
+EPSILON  ]  
+ ]  
+ ]  
+ ]  
+ ]  
+ ]  
+BoolH1  [  
+EPSILON  ]  
+ ]  
+BoolG1  [  
+EPSILON  ]  
+ ]  
+BoolF1  [  
+EPSILON  ]  
+ ]  
+BoolE  [  
+EPSILON  ]  
+ ]  
+ ]  
+ ]  
+ ]  
+, EOS , Command  [  
+PrintCmd  [  
+Print , LP , IDENT [sum] , RP  ]  
+ ]  
+, EOS , Command  [  
+ReadCmd  [  
+Read , LP , IDENT [b] , RP  ]  
+ ]  
+, EOS , Command  [  
+AssignmentCmd  [  
+IDENT [c] , ASSIGN , Expression  [  
+BoolExpression  [  
+BoolF  [  
+BoolG  [  
+BoolH  [  
+BoolI  [  
+BoolJ  [  
+BoolLiteral [tt]  ]  
+ ]  
+BoolH1  [  
+EPSILON  ]  
+ ]  
+BoolG1  [  
+EPSILON  ]  
+ ]  
+BoolF1  [  
+EPSILON  ]  
+ ]  
+BoolE  [  
+EPSILON  ]  
+ ]  
+ ]  
+ ]  
+ ]  
+, EOS , Command  [  
+AssignmentCmd  [  
+IDENT [a] , ASSIGN , Expression  [  
+BoolExpression  [  
+BoolF  [  
+BoolG  [  
+BoolH  [  
+BoolI  [  
+NEG , BoolJ  [  
+IntExpression  [  
+IntT  [  
+IntF  [  
+IntF1  [  
+IDENT [b]  ]  
+ ]  
+IntT1  [  
+EPSILON  ]  
+ ]  
+IntE  [  
+EPSILON  ]  
+ ]  
+ ]  
+ ]  
+BoolH1  [  
+EPSILON  ]  
+ ]  
+BoolG1  [  
+EPSILON  ]  
+ ]  
+BoolF1  [  
+EPSILON  ]  
+ ]  
+BoolE  [  
+OR , BoolExpression  [  
+BoolF  [  
+BoolG  [  
+BoolH  [  
+BoolI  [  
+BoolJ  [  
+IntExpression  [  
+IntT  [  
+IntF  [  
+IntF1  [  
+IDENT [c]  ]  
+ ]  
+IntT1  [  
+EPSILON  ]  
+ ]  
+IntE  [  
+EPSILON  ]  
+ ]  
+ ]  
+ ]  
+BoolH1  [  
+EPSILON  ]  
+ ]  
+BoolG1  [  
+EPSILON  ]  
+ ]  
+BoolF1  [  
+AND , BoolF  [  
+BoolG  [  
+BoolH  [  
+BoolI  [  
+BoolJ  [  
+IntExpression  [  
+IntT  [  
+IntF  [  
+IntF1  [  
+IDENT [c]  ]  
+ ]  
+IntT1  [  
+EPSILON  ]  
+ ]  
+IntE  [  
+EPSILON  ]  
+ ]  
+ ]  
+ ]  
+BoolH1  [  
+EPSILON  ]  
+ ]  
+BoolG1  [  
+EPSILON  ]  
+ ]  
+BoolF1  [  
+EPSILON  ]  
+ ]  
+ ]  
+ ]  
+BoolE  [  
+EPSILON  ]  
+ ]  
+ ]  
+ ]  
+ ]  
+ ]  
+ ]  
+, EOS , Command  [  
+EPSILON  ]  
+, RB  ]  
+ ]  
+ ]  
+ ]  
