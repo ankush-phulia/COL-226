@@ -1,0 +1,41 @@
+[ Program
+		[ Block
+			[ DeclarationSeq
+				[ IntVarDecls
+						[ var1,
+								var2]
+					,
+					BoolVarDecls
+						[ var3,
+								var4]
+					,
+					ProcDecls
+					[ ]
+				]
+			,
+			CommandSeq
+				[ READ
+						[ var1]
+					,
+					READ
+							[ var2]
+						,
+						ASSIGN
+								[ var3,
+									BINADD
+									[ var1,
+																				
+																	var2]
+								]
+							,
+							ASSIGN
+									[ var4,
+										GT
+										[ var1,
+																					
+															var3]
+									]
+								]
+			]
+		]
+	]
