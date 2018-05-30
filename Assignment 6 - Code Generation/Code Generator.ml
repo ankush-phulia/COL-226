@@ -1,11 +1,11 @@
 #load "str.cma";;
-(* #use "C:\Python27\COL 226 Ocaml\Assignment 6 - Code Generation\BigInt.ml";;        *)
-(* #use "C:\Python27\COL 226 Ocaml\Assignment 6 - Code Generation\State Machine.ml";; *)
+#use "BigInt.ml";;       
+#use "State Machine.ml";;
 
-let in_file_name1="C:\Python27\COL 226 Ocaml\Assignment 6 - Code Generation\ast2.txt";;
-let in_file_name2="C:\Python27\COL 226 Ocaml\Assignment 6 - Code Generation\st2.txt";;
-let out_file_name1="C:\Python27\COL 226 Ocaml\Assignment 6 - Code Generation\instructions.txt";;
-let out_file_name2="C:\Python27\COL 226 Ocaml\Assignment 6 - Code Generation\output.txt";;
+let in_file_name1="ast2.txt";;
+let in_file_name2="st2.txt";;
+let out_file_name1="instructions.txt";;
+let out_file_name2="output.txt";;
 
 let isInteger a=
 	if a="" then false

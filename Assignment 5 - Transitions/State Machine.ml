@@ -6,7 +6,7 @@ let in_file_name = Sys.argv.(1);;
 let out_file_name= Sys.argv.(2);;
 
 #load "str.cma";;
-#use "C:\Python27\COL 226 Ocaml\Assignment 5 - Transitions\BigInt.ml";;
+#use "BigInt.ml";;
 open BigInt;;
 exception Empty_Stack_Exception;;
 

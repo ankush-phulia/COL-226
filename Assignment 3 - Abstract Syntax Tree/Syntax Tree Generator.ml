@@ -1,12 +1,9 @@
-(* let() = if Array.length Sys.argv <> 3                                                            *)
-(* 	then let () = print_string "Correct format: cs5140279.ml <input_file> <output_file>" in exit 1 *)
-(* 	else ();;                                                                                      *)
+let() = if Array.length Sys.argv <> 3                                                           
+	then let () = print_string "Correct format: cs5140279.ml <input_file> <output_file>" in exit 1
+	else ();;                                                                                     
 
-(* let in_file_name = Sys.argv.(1);;  *)
-(* let out_file_name = Sys.argv.(2);; *)
-
-let in_file_name="C:\Python27\COL 226 Ocaml\Assignment 3 - Abstract Syntax Tree\pt3.txt";;
-let out_file_name="C:\Python27\COL 226 Ocaml\Assignment 3 - Abstract Syntax Tree\output3.txt";;
+let in_file_name = Sys.argv.(1);; 
+let out_file_name = Sys.argv.(2);;
 
 let rec clean l acc=
 	match l with 

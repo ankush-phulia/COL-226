@@ -1,14 +1,11 @@
-(* let() = if Array.length Sys.argv <> 3                                                                                                          *)
-(* 	then let () = print_string "Correct format: cs5140279.ml <input_file> <output_file for parse tree> <output_file for symbol table>" in exit 1 *)
-(* 	else ();;                                                                                                                                    *)
-(* let in_file_name = Sys.argv.(1);;                                                                                                              *)
-(* let out_file_name= Sys.argv.(2);;                                                                                                              *)
-
-let in_file_name = "C:\Python27\COL 226 Ocaml\Assignment 6 - Code Generation\instructions.txt";;
-let out_file_name= "C:\Python27\COL 226 Ocaml\Assignment 6 - Code Generation\output.txt";;
+let() = if Array.length Sys.argv <> 3                                                                                                         
+	then let () = print_string "Correct format: cs5140279.ml <input_file> <output_file for parse tree> <output_file for symbol table>" in exit 1
+	else ();;                                                                                                                                   
+let in_file_name = Sys.argv.(1);;                                                                                                             
+let out_file_name= Sys.argv.(2);;                                                                                                             
 
 #load "str.cma";;
-#use "C:\Python27\COL 226 Ocaml\Assignment 5 - Transitions\BigInt.ml";;
+#use "BigInt.ml";;
 
 open BigInt;;
 exception Empty_Stack_Exception;;
