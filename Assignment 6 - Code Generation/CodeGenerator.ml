@@ -1,11 +1,11 @@
 #load "str.cma";;
 #use "BigInt.ml";;       
-#use "State Machine.ml";;
+#use "StateMachine.ml";;
 
-let in_file_name1="ast2.txt";;
-let in_file_name2="st2.txt";;
-let out_file_name1="instructions.txt";;
-let out_file_name2="output.txt";;
+let in_file_name1=Sys.argv.(1);;
+let in_file_name2=Sys.argv.(2);;
+let out_file_name1=Sys.argv.(3);;
+let out_file_name2=Sys.argv.(4);;
 
 let isInteger a=
 	if a="" then false

@@ -1,12 +1,12 @@
-let() = if Array.length Sys.argv <> 3
-	then let () = print_string "Correct format: cs5140279.ml <input_file> <output_file for parse tree> <output_file for symbol table>" in exit 1
-	else ();;
-
-let in_file_name = Sys.argv.(1);;
-let out_file_name= Sys.argv.(2);;
+let() = if Array.length Sys.argv <> 3                                                                                                         
+	then let () = print_string "Correct format: StateMachine.ml <input_file> <output_file for parse tree> <output_file for symbol table>\n" in exit 1
+	else ();;                                                                                                                                   
+let in_file_name = Sys.argv.(1);;                                                                                                             
+let out_file_name= Sys.argv.(2);;                                                                                                             
 
 #load "str.cma";;
 #use "BigInt.ml";;
+
 open BigInt;;
 exception Empty_Stack_Exception;;
 
@@ -48,6 +48,15 @@ let rec get y l=
 			get y xs
 	;;
 			
+let rec search_proc l=
+	match l with
+	| []->false
+	| (x,x1,x2)::xs->
+		if x2=1 then true
+		else 
+			search_proc xs
+	;;			
+			
 let rec get_proc l=
 	match l with
 	| []->raise Empty_Stack_Exception
@@ -69,6 +78,8 @@ let rec update z y l=
 (* let in_file_name="C:\Python27\COL 226 Ocaml\Assignment 5 - Transitions\input.txt";;   *)
 (* let out_file_name="C:\Python27\COL 226 Ocaml\Assignment 5 - Transitions\output.txt";; *)
 
+(* let input= ["3";"ff"];; *)
+
 let rec read_ins inslist pc symbol_table output=
 	let instruction=Array.get inslist pc in
 	let instr=Str.split (Str.regexp "[ \t]+") instruction in
@@ -83,6 +94,7 @@ let rec read_ins inslist pc symbol_table output=
 			read_ins inslist (pc+1) (symbol_table) (output@[xx])
 		| "READ"->
 			let inp=read_line() in
+			(* let input=in2 in *)
 			read_ins inslist (pc+1) (update inp z symbol_table) output
 		| "CALL"->
 			let xx=get x symbol_table in
@@ -95,8 +107,12 @@ let rec read_ins inslist pc symbol_table output=
 				read_ins inslist (int_of_string y) (symbol_table) (output)
 		| "GOTO"->read_ins inslist (int_of_string y) symbol_table output
 		| "RETURN"->
-			let xx,ll=get_proc symbol_table in
-			read_ins inslist (int_of_string xx) ll output
+			(* let chk=search_proc symbol_table in *)
+			(* if chk=true then                    *)
+				let xx,ll=get_proc symbol_table in
+				read_ins inslist (int_of_string xx) ll output
+			(* else                                              *)
+			(* 	read_ins inslist (pc+1) (symbol_table) (output) *)
 		| "ASSIGN"->
 			let chk=search x symbol_table in 
 			if chk=false then
@@ -259,4 +275,4 @@ let read_prog input_file output_file=
 			writef ys	
 	in writef o;;
 
-read_prog in_file_name out_file_name;;                                                                                                                                                                                                                                              *)
+read_prog in_file_name out_file_name;;                                                                                                                                                                                                                                              

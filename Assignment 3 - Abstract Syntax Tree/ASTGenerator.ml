@@ -1,5 +1,5 @@
 let() = if Array.length Sys.argv <> 3                                                           
-	then let () = print_string "Correct format: cs5140279.ml <input_file> <output_file>" in exit 1
+	then let () = print_string "Correct format: ASTGenerator.ml <input_file> <output_file>\n" in exit 1
 	else ();;                                                                                     
 
 let in_file_name = Sys.argv.(1);; 
@@ -215,52 +215,3 @@ let printAbstractTree filename1 filename2=
 	close_out outfile;;
 
 printAbstractTree in_file_name out_file_name;
-
-(* let in_file_name="C:\Python27\COL 226 Ocaml\Assignment 3 - Abstract Syntax Tree\input.txt"         *)
-(* let out_file_name="C:\Python27\COL 226 Ocaml\Assignment 3 - Abstract Syntax Tree\output.txt"       *)
-(* let in_file_name2="C:\Python27\COL 226 Ocaml\Assignment 2 - Parser\TestCase2\Output_ParseTree.txt" *)		
-		
-		(* let a,b=x in                                                      *)
-		(* (                                                                 *)
-		(* 	let l1,l2=cut_list l [] b in                                    *)
-		(* 	if l1=[] then                                                   *)
-		(* 		(match curr with                                              *)
-		(* 		| Node(p,q,r)->                                               *)
-		(* 			(match l2 with                                              *)
-		(* 			| []->                                                      *)
-		(* 				[Node(p,q,r@[Leaf(a,b)])]                                 *)
-		(* 			| y::ys->                                                   *)
-		(* 				let pp,qq=y in                                            *)
-		(* 				let l3=create_parsetree ys (Leaf(pp,qq)) in               *)
-		(* 				[Node(p,q,(r@[Leaf(a,b)]))]@l3				                    *)
-		(* 				)					                                               *)
-		(* 		|Leaf(p,q)->                                                  *)
-		(* 			(match l2 with                                              *)
-		(* 			| []->                                                      *)
-		(* 				[Node(p,q,[Leaf(a,b)])]                                   *)
-		(* 			| y::ys->                                                   *)
-		(* 				let pp,qq=y in                                            *)
-		(* 				let l3=create_parsetree ys (Leaf(pp,qq)) in               *)
-		(* 				[Node(p,q,[Leaf(a,b)])]@l3				                        *)
-		(* 				)                                                         *)
-		(* 			)				                                                   *)
-		(* 	else                                                            *)
-		(* 		let ll=create_parsetree l1 (Node(a,b,[])) in                  *)
-		(* 		(match l2 with                                                *)
-		(* 		| []->                                                        *)
-		(* 			(match curr with                                            *)
-		(* 			| Node(p,q,r)->                                             *)
-		(* 				[Node(p,q,r@ll)]                                          *)
-		(* 			|Leaf(p,q)->[Node(p,q,ll)]                                  *)
-		(* 			)                                                           *)
-		(* 		| y::ys->                                                     *)
-		(* 			let ppp,qqq=List.hd l2 in                                   *)
-		(* 			let lll=create_parsetree (List.tl l2) (Node(ppp,qqq,[])) in *)
-		(* 			(match curr with                                            *)
-		(* 			| Node(p,q,r)->                                             *)
-		(* 				[Node(p,q,r@ll@lll)]                                      *)
-		(* 			|Leaf(p,q)->[Node(p,q,ll@lll)]                              *)
-		(* 			)                                                           *)
-		(* 		)                                                             *)
-		(* )		                                                             *)		
-(* Pswdx123 *)
